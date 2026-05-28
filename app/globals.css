@@ -1,0 +1,457 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Summer Tropical Paradise Theme - Vibrant & Refreshing */
+  --background: oklch(0.08 0.02 200);
+  --foreground: oklch(0.98 0.01 80);
+  --card: oklch(0.12 0.025 200);
+  --card-foreground: oklch(0.98 0.01 80);
+  --popover: oklch(0.1 0.02 200);
+  --popover-foreground: oklch(0.98 0.01 80);
+  --primary: oklch(0.82 0.2 145);
+  --primary-foreground: oklch(0.08 0.02 200);
+  --secondary: oklch(0.18 0.03 200);
+  --secondary-foreground: oklch(0.95 0.01 80);
+  --muted: oklch(0.15 0.025 200);
+  --muted-foreground: oklch(0.65 0.02 80);
+  --accent: oklch(0.85 0.18 55);
+  --accent-foreground: oklch(0.08 0.02 200);
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(0.2 0.03 200);
+  --input: oklch(0.15 0.025 200);
+  --ring: oklch(0.82 0.2 145);
+  
+  /* Tropical fruit colors */
+  --chart-1: oklch(0.82 0.22 145);
+  --chart-2: oklch(0.85 0.2 55);
+  --chart-3: oklch(0.72 0.25 15);
+  --chart-4: oklch(0.78 0.22 70);
+  --chart-5: oklch(0.75 0.2 200);
+  
+  --radius: 1rem;
+  
+  /* Custom tropical colors - 10 sabores */
+  --lime: oklch(0.82 0.22 145);
+  --kiwi: oklch(0.78 0.2 140);
+  --watermelon: oklch(0.72 0.28 15);
+  --passionfruit: oklch(0.82 0.22 70);
+  --strawberry: oklch(0.68 0.26 20);
+  --coconut: oklch(0.92 0.03 80);
+  --mango: oklch(0.82 0.2 85);
+  --pineapple: oklch(0.88 0.18 95);
+  --pitaya: oklch(0.72 0.28 350);
+  --orange: oklch(0.78 0.22 55);
+  --tropical-dark: oklch(0.08 0.02 200);
+  --tropical-glow: oklch(0.9 0.15 145);
+  --summer-gradient-1: oklch(0.82 0.2 145);
+  --summer-gradient-2: oklch(0.85 0.18 55);
+  --summer-gradient-3: oklch(0.72 0.25 15);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 200);
+  --foreground: oklch(0.98 0.01 80);
+  --card: oklch(0.12 0.025 200);
+  --card-foreground: oklch(0.98 0.01 80);
+  --popover: oklch(0.1 0.02 200);
+  --popover-foreground: oklch(0.98 0.01 80);
+  --primary: oklch(0.82 0.2 145);
+  --primary-foreground: oklch(0.08 0.02 200);
+  --secondary: oklch(0.18 0.03 200);
+  --secondary-foreground: oklch(0.95 0.01 80);
+  --muted: oklch(0.15 0.025 200);
+  --muted-foreground: oklch(0.65 0.02 80);
+  --accent: oklch(0.85 0.18 55);
+  --accent-foreground: oklch(0.08 0.02 200);
+  --destructive: oklch(0.65 0.25 25);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(0.2 0.03 200);
+  --input: oklch(0.15 0.025 200);
+  --ring: oklch(0.82 0.2 145);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Geist', 'Geist Fallback', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-lime: var(--lime);
+  --color-kiwi: var(--kiwi);
+  --color-watermelon: var(--watermelon);
+  --color-passionfruit: var(--passionfruit);
+  --color-strawberry: var(--strawberry);
+  --color-coconut: var(--coconut);
+  --color-mango: var(--mango);
+  --color-pineapple: var(--pineapple);
+  --color-pitaya: var(--pitaya);
+  --color-orange: var(--orange);
+  --color-tropical-dark: var(--tropical-dark);
+  --color-tropical-glow: var(--tropical-glow);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(2deg); }
+  50% { transform: translateY(-25px) rotate(0deg); }
+  75% { transform: translateY(-15px) rotate(-2deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(60px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slide-in-left {
+  from { 
+    opacity: 0; 
+    transform: translateX(-60px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes slide-in-right {
+  from { 
+    opacity: 0; 
+    transform: translateX(60px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { 
+    opacity: 0; 
+    transform: scale(0.85); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(5px) rotate(-5deg); }
+}
+
+@keyframes tropical-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes bubble {
+  0% { transform: translateY(100%) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.animate-tropical-gradient {
+  background-size: 200% 200%;
+  animation: tropical-gradient 5s ease infinite;
+}
+
+.animate-bubble {
+  animation: bubble 8s ease-in-out infinite;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--lime), var(--accent));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary), var(--watermelon));
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Glow effects */
+.glow-lime {
+  box-shadow: 0 0 80px rgba(166, 227, 161, 0.4), 0 0 120px rgba(166, 227, 161, 0.2);
+}
+
+.glow-watermelon {
+  box-shadow: 0 0 80px rgba(255, 107, 129, 0.4), 0 0 120px rgba(255, 107, 129, 0.2);
+}
+
+.glow-kiwi {
+  box-shadow: 0 0 80px rgba(156, 204, 101, 0.4), 0 0 120px rgba(156, 204, 101, 0.2);
+}
+
+.glow-passionfruit {
+  box-shadow: 0 0 80px rgba(255, 183, 77, 0.4), 0 0 120px rgba(255, 183, 77, 0.2);
+}
+
+.glow-strawberry {
+  box-shadow: 0 0 80px rgba(255, 82, 82, 0.4), 0 0 120px rgba(255, 82, 82, 0.2);
+}
+
+.glow-coconut {
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.3), 0 0 120px rgba(255, 255, 255, 0.15);
+}
+
+.glow-mango {
+  box-shadow: 0 0 80px rgba(255, 193, 7, 0.4), 0 0 120px rgba(255, 193, 7, 0.2);
+}
+
+.glow-pineapple {
+  box-shadow: 0 0 80px rgba(255, 235, 59, 0.4), 0 0 120px rgba(255, 235, 59, 0.2);
+}
+
+.glow-pitaya {
+  box-shadow: 0 0 80px rgba(233, 30, 99, 0.4), 0 0 120px rgba(233, 30, 99, 0.2);
+}
+
+.glow-orange {
+  box-shadow: 0 0 80px rgba(255, 152, 0, 0.4), 0 0 120px rgba(255, 152, 0, 0.2);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--lime), var(--accent), var(--watermelon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-summer {
+  background: linear-gradient(135deg, var(--pineapple), var(--mango), var(--watermelon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-tropical {
+  background: linear-gradient(135deg, var(--lime), var(--pitaya), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Background gradients */
+.bg-gradient-summer {
+  background: linear-gradient(135deg, 
+    rgba(166, 227, 161, 0.15), 
+    rgba(255, 193, 7, 0.1), 
+    rgba(255, 107, 129, 0.15)
+  );
+}
+
+.bg-gradient-tropical {
+  background: linear-gradient(180deg, 
+    var(--background) 0%,
+    rgba(166, 227, 161, 0.05) 50%,
+    var(--background) 100%
+  );
+}
+
+/* Decorative elements */
+.tropical-border {
+  border-image: linear-gradient(135deg, var(--lime), var(--accent), var(--watermelon)) 1;
+}
+
+/* Fruit color utilities */
+.text-lime { color: var(--lime); }
+.text-kiwi { color: var(--kiwi); }
+.text-watermelon { color: var(--watermelon); }
+.text-passionfruit { color: var(--passionfruit); }
+.text-strawberry { color: var(--strawberry); }
+.text-coconut { color: var(--coconut); }
+.text-mango { color: var(--mango); }
+.text-pineapple { color: var(--pineapple); }
+.text-pitaya { color: var(--pitaya); }
+.text-orange { color: var(--orange); }
+
+.bg-lime { background-color: var(--lime); }
+.bg-kiwi { background-color: var(--kiwi); }
+.bg-watermelon { background-color: var(--watermelon); }
+.bg-passionfruit { background-color: var(--passionfruit); }
+.bg-strawberry { background-color: var(--strawberry); }
+.bg-coconut { background-color: var(--coconut); }
+.bg-mango { background-color: var(--mango); }
+.bg-pineapple { background-color: var(--pineapple); }
+.bg-pitaya { background-color: var(--pitaya); }
+.bg-orange { background-color: var(--orange); }
