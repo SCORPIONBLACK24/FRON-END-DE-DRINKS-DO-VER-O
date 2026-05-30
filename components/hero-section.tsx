@@ -84,10 +84,10 @@ export function HeroSection() {
           <div
             className={`text-center lg:text-left ${isVisible ? "animate-slide-up" : "opacity-0"}`}
           >
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 rounded-full border border-amber-500/30 animate-shimmer">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-red-500/20 text-amber-400 rounded-full border border-amber-500/30 animate-shimmer">
               <Zap className="w-4 h-4" />
-              <span>Energia Pura</span>
-              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+              <span>Especial Dia dos Namorados</span>
+              <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-bold mb-8 leading-none">
@@ -96,9 +96,9 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Potencialize seu dia com sabores vibrantes. 
-              <span className="text-amber-400 font-medium"> 3 sabores explosivos </span>
-              que ativam sua energia natural.
+              Celebre o amor neste verão com sabores vibrantes.
+              <span className="text-red-400 font-medium"> Energia e paixão </span>
+              em cada gole para momentos especiais a dois.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -112,7 +112,7 @@ export function HeroSection() {
                 </span>
               </button>
               <button className="px-10 py-5 glass-strong text-foreground font-semibold rounded-full hover:bg-amber-500/10 transition-all duration-300 text-lg">
-                Nossa História
+                Sobre o Projeto
               </button>
             </div>
 

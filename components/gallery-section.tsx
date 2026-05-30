@@ -16,15 +16,6 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: "/drinks/strawberry-drink.png",
-    title: "Morango Bliss",
-    category: "Frutas Vermelhas",
-    color: "from-red-500/50 to-rose-500/30",
-    borderColor: "border-red-400/50",
-    textColor: "text-red-400",
-  },
-  {
-    id: 3,
     image: "/drinks/kiwi-drink.png",
     title: "Kiwi Exótico",
     category: "Exóticos",
@@ -87,8 +78,8 @@ export function GallerySection() {
           </p>
         </div>
 
-        {/* Gallery Grid - 3 items */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {/* Gallery Grid - 2 items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           {galleryItems.map((item, index) => {
             return (
               <div

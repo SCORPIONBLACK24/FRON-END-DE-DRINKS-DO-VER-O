@@ -8,9 +8,8 @@ const navLinks = [
   { label: "Início", href: "#" },
   { label: "Drinks", href: "#drinks" },
   { label: "Caipirinhas", href: "#caipirinhas" },
-  { label: "Sobre", href: "#features" },
   { label: "Galeria", href: "#gallery" },
-  { label: "Contato", href: "#cta" },
+  { label: "Sobre", href: "#sobre" },
 ]
 
 export function Navbar() {
@@ -92,11 +91,8 @@ export function Navbar() {
             <div className="hidden lg:flex items-center gap-4">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20">
                 <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-                <span className="text-xs font-medium text-amber-400">3 Sabores</span>
+                <span className="text-xs font-medium text-amber-400">Projeto INF-09</span>
               </div>
-              <button className="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-sm font-bold rounded-full hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 hover:scale-105">
-                Pedir Agora
-              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -158,12 +154,9 @@ export function Navbar() {
           <div className="flex items-center gap-4 mt-8">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20">
               <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-amber-400">3 Sabores</span>
+              <span className="text-sm font-medium text-amber-400">Projeto INF-09</span>
             </div>
           </div>
-          <button className="mt-4 px-10 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-lg font-bold rounded-full hover:shadow-xl transition-all duration-300">
-            Pedir Agora
-          </button>
         </div>
       </div>
     </>

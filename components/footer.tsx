@@ -15,16 +15,14 @@ const footerLinks = {
     { label: "Caipirinha Kiwi", href: "#caipirinhas", color: "hover:text-green-400" },
   ],
   empresa: [
-    { label: "Sobre Nós", href: "#features" },
-    { label: "Nossa História", href: "#" },
-    { label: "Sustentabilidade", href: "#" },
-    { label: "Carreira", href: "#" },
+    { label: "Sobre o Projeto", href: "#sobre" },
+    { label: "Turma INF-09", href: "#sobre" },
+    { label: "Empreendedorismo", href: "#sobre" },
   ],
   suporte: [
-    { label: "FAQ", href: "#" },
-    { label: "Contato", href: "#cta" },
-    { label: "Política de Privacidade", href: "#" },
-    { label: "Termos de Uso", href: "#" },
+    { label: "Galeria", href: "#gallery" },
+    { label: "Drinks", href: "#drinks" },
+    { label: "Caipirinhas", href: "#caipirinhas" },
   ],
 }
 
@@ -62,8 +60,8 @@ export function Footer() {
               </span>
             </a>
             <p className="text-muted-foreground mb-8 max-w-sm leading-relaxed">
-              Potencialize seu dia com 3 sabores explosivos feitos com
-              paixão e os melhores ingredientes naturais. Energia pura em cada gole.
+              Projeto de empreendedorismo da turma INF-09 - Técnico de Informática.
+              Drinks energéticos para celebrar o verão e o Dia dos Namorados.
             </p>
 
             {/* Drink thumbnails */}
@@ -155,7 +153,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-              Empresa
+              O Projeto
             </h4>
             <ul className="space-y-4">
               {footerLinks.empresa.map((link) => (
@@ -175,7 +173,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
-              Suporte
+              Navegação
             </h4>
             <ul className="space-y-4">
               {footerLinks.suporte.map((link) => (
@@ -196,14 +194,12 @@ export function Footer() {
         <div className="pt-8 border-t border-amber-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2026 zoom.energia. Todos os direitos reservados.
+              © 2026 zoom.energia | Projeto Turma INF-09
             </p>
             <div className="flex items-center gap-2">
               <span className="w-1 h-1 bg-muted-foreground rounded-full hidden md:block" />
               <span className="text-sm text-muted-foreground">
-                Feito com{" "}
-                <span className="text-amber-400">energia</span>
-                {" "}no Brasil
+                Técnico de Informática
               </span>
             </div>
           </div>
