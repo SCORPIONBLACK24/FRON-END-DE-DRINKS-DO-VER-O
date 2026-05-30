@@ -142,8 +142,8 @@ export function HeroSection() {
               <div className="absolute inset-0 -m-12 rounded-full border-2 border-amber-500/20 animate-rotate-slow" />
               <div className="absolute inset-0 -m-20 rounded-full border border-yellow-500/10 animate-rotate-slow" style={{ animationDirection: 'reverse' }} />
 
-              {/* Main drink image */}
-              <div className="relative w-[280px] h-[380px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[520px] animate-float">
+              {/* Main drink image only — no info card */}
+              <div className="relative w-[280px] h-[380px] md:w-[380px] md:h-[480px] lg:w-[460px] lg:h-[560px] animate-float">
                 <Image
                   src={drinks[currentDrink].image}
                   alt={`Drink de ${drinks[currentDrink].name}`}
@@ -151,16 +151,6 @@ export function HeroSection() {
                   className="object-contain drop-shadow-2xl transition-all duration-700"
                   priority
                 />
-              </div>
-
-              {/* Drink name badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass-strong px-8 py-4 rounded-2xl">
-                <p className="text-xl font-bold text-foreground">
-                  {drinks[currentDrink].name}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {drinks[currentDrink].subtitle}
-                </p>
               </div>
             </div>
           </div>
