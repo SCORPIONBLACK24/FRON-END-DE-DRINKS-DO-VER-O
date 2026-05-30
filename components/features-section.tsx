@@ -1,66 +1,57 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Leaf, Droplets, Sun, Award, Sparkles, Heart, Zap } from "lucide-react"
+import { Leaf, Droplets, Award, Sparkles, Heart, Zap } from "lucide-react"
 
 const features = [
   {
     icon: Leaf,
     title: "100% Natural",
     description:
-      "Ingredientes frescos e organicos, sem conservantes artificiais.",
+      "Ingredientes frescos e orgânicos, sem conservantes artificiais.",
     color: "from-lime-500/20 to-emerald-500/10",
     iconColor: "text-lime-400",
     borderColor: "border-lime-500/20",
   },
   {
     icon: Droplets,
-    title: "Hidratacao Premium",
+    title: "Hidratação Premium",
     description: "Formulados para refrescar e hidratar nos dias mais quentes.",
-    color: "from-blue-500/20 to-cyan-500/10",
-    iconColor: "text-blue-400",
-    borderColor: "border-blue-500/20",
+    color: "from-amber-500/20 to-yellow-500/10",
+    iconColor: "text-amber-400",
+    borderColor: "border-amber-500/20",
   },
   {
-    icon: Sun,
-    title: "Sabor do Verao",
-    description:
-      "Receitas exclusivas que capturam a essencia da estacao mais quente.",
-    color: "from-yellow-500/20 to-orange-500/10",
+    icon: Zap,
+    title: "Energia Natural",
+    description: "Vitaminas e antioxidantes para turbinar seu dia com força.",
+    color: "from-yellow-500/20 to-amber-500/10",
     iconColor: "text-yellow-400",
     borderColor: "border-yellow-500/20",
   },
   {
     icon: Award,
     title: "Qualidade Artesanal",
-    description: "Cada drink e preparado com dedicacao e expertise de mestres.",
+    description: "Cada drink é preparado com dedicação e expertise de mestres.",
     color: "from-amber-500/20 to-orange-500/10",
     iconColor: "text-amber-400",
     borderColor: "border-amber-500/20",
   },
   {
     icon: Sparkles,
-    title: "10 Sabores Unicos",
-    description: "De citricos classicos a frutas exoticas, variedade para todos.",
-    color: "from-fuchsia-500/20 to-pink-500/10",
-    iconColor: "text-fuchsia-400",
-    borderColor: "border-fuchsia-500/20",
+    title: "3 Sabores Únicos",
+    description: "Limão, Morango e Kiwi - os favoritos que energizam.",
+    color: "from-green-500/20 to-emerald-500/10",
+    iconColor: "text-green-400",
+    borderColor: "border-green-500/20",
   },
   {
     icon: Heart,
     title: "Feito com Amor",
-    description: "Paixao e cuidado em cada etapa da producao.",
+    description: "Paixão e cuidado em cada etapa da produção.",
     color: "from-red-500/20 to-rose-500/10",
     iconColor: "text-red-400",
     borderColor: "border-red-500/20",
-  },
-  {
-    icon: Zap,
-    title: "Energia Natural",
-    description: "Vitaminas e antioxidantes para turbinar seu dia.",
-    color: "from-orange-500/20 to-amber-500/10",
-    iconColor: "text-orange-400",
-    borderColor: "border-orange-500/20",
   },
 ]
 
@@ -93,39 +84,39 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="features" className="py-24 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-watermelon/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-600/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10" ref={containerRef}>
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-primary/20 to-accent/20 text-primary rounded-full border border-primary/30">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 rounded-full border border-amber-500/30">
             <Sparkles className="w-4 h-4" />
             Por Que Escolher
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6">
-            A Experiencia
-            <span className="text-gradient-tropical"> Tropical Paradise</span>
+            A Experiência
+            <span className="text-gradient-gold"> zoom.energia</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Mais do que drinks, criamos momentos inesqueciveis que celebram o
-            melhor do verao brasileiro com 10 sabores unicos.
+            Mais do que drinks, criamos momentos de pura energia que potencializam
+            seu dia com 3 sabores explosivos.
           </p>
         </div>
 
         {/* Features Grid - Bento Style */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`feature-card opacity-0 group relative p-8 rounded-3xl bg-gradient-to-br ${feature.color} border ${feature.borderColor} hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 ${
+              className={`feature-card opacity-0 group relative p-8 rounded-3xl bg-gradient-to-br ${feature.color} border ${feature.borderColor} hover:border-amber-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 ${
                 index === 0 ? 'lg:col-span-2' : ''
-              } ${index === 4 ? 'lg:col-span-2' : ''}`}
+              } ${index === 3 ? 'lg:col-span-2' : ''}`}
             >
               {/* Shimmer effect */}
               <div className="absolute inset-0 rounded-3xl animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -140,7 +131,7 @@ export function FeaturesSection() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-amber-400 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -163,20 +154,20 @@ export function FeaturesSection() {
         {/* Stats row */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient-summer mb-2">10</div>
-            <div className="text-muted-foreground">Sabores Unicos</div>
+            <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">3</div>
+            <div className="text-muted-foreground">Sabores Únicos</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient-summer mb-2">100%</div>
+            <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">100%</div>
             <div className="text-muted-foreground">Natural</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient-summer mb-2">50+</div>
-            <div className="text-muted-foreground">Ingredientes</div>
+            <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">∞</div>
+            <div className="text-muted-foreground">Energia</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-gradient-summer mb-2">5★</div>
-            <div className="text-muted-foreground">Avaliacao</div>
+            <div className="text-4xl md:text-5xl font-bold text-gradient-gold mb-2">5★</div>
+            <div className="text-muted-foreground">Avaliação</div>
           </div>
         </div>
       </div>

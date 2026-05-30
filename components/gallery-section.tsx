@@ -2,47 +2,20 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Sparkles } from "lucide-react"
+import { Zap } from "lucide-react"
 
 const galleryItems = [
   {
     id: 1,
     image: "/drinks/lime-drink.png",
-    title: "Limao Tropical",
-    category: "Citricos",
+    title: "Limão Tropical",
+    category: "Cítricos",
     color: "from-lime-500/50 to-emerald-500/30",
     borderColor: "border-lime-400/50",
     textColor: "text-lime-400",
   },
   {
     id: 2,
-    image: "/drinks/kiwi-drink.png",
-    title: "Kiwi Exotico",
-    category: "Exoticos",
-    color: "from-green-500/50 to-teal-500/30",
-    borderColor: "border-green-400/50",
-    textColor: "text-green-400",
-  },
-  {
-    id: 3,
-    image: "/drinks/watermelon-drink.png",
-    title: "Melancia Splash",
-    category: "Frutas Vermelhas",
-    color: "from-pink-500/50 to-red-500/30",
-    borderColor: "border-pink-400/50",
-    textColor: "text-pink-400",
-  },
-  {
-    id: 4,
-    image: "/drinks/passionfruit-drink.png",
-    title: "Maracuja Sunset",
-    category: "Tropicais",
-    color: "from-orange-500/50 to-yellow-500/30",
-    borderColor: "border-orange-400/50",
-    textColor: "text-orange-400",
-  },
-  {
-    id: 5,
     image: "/drinks/strawberry-drink.png",
     title: "Morango Bliss",
     category: "Frutas Vermelhas",
@@ -51,49 +24,13 @@ const galleryItems = [
     textColor: "text-red-400",
   },
   {
-    id: 6,
-    image: "/drinks/coconut-drink.png",
-    title: "Coco Paradise",
-    category: "Tropicais",
-    color: "from-white/30 to-neutral-300/20",
-    borderColor: "border-white/40",
-    textColor: "text-white",
-  },
-  {
-    id: 7,
-    image: "/drinks/mango-drink.png",
-    title: "Manga Sunrise",
-    category: "Tropicais",
-    color: "from-amber-500/50 to-orange-500/30",
-    borderColor: "border-amber-400/50",
-    textColor: "text-amber-400",
-  },
-  {
-    id: 8,
-    image: "/drinks/pineapple-drink.png",
-    title: "Abacaxi Breeze",
-    category: "Tropicais",
-    color: "from-yellow-500/50 to-amber-500/30",
-    borderColor: "border-yellow-400/50",
-    textColor: "text-yellow-400",
-  },
-  {
-    id: 9,
-    image: "/drinks/pitaya-drink.png",
-    title: "Pitaya Magic",
-    category: "Exoticos",
-    color: "from-fuchsia-500/50 to-pink-500/30",
-    borderColor: "border-fuchsia-400/50",
-    textColor: "text-fuchsia-400",
-  },
-  {
-    id: 10,
-    image: "/drinks/orange-drink.png",
-    title: "Laranja Vitality",
-    category: "Citricos",
-    color: "from-orange-500/50 to-amber-500/30",
-    borderColor: "border-orange-500/50",
-    textColor: "text-orange-500",
+    id: 3,
+    image: "/drinks/kiwi-drink.png",
+    title: "Kiwi Exótico",
+    category: "Exóticos",
+    color: "from-green-500/50 to-teal-500/30",
+    borderColor: "border-green-400/50",
+    textColor: "text-green-400",
   },
 ]
 
@@ -122,13 +59,13 @@ export function GallerySection() {
   }, [])
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="gallery" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-amber-500/5 to-background" />
       
       {/* Decorative orbs */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-watermelon/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-pineapple/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
 
       <div
         className="container mx-auto px-4 relative z-10"
@@ -136,33 +73,29 @@ export function GallerySection() {
       >
         {/* Section Header */}
         <div className={`text-center max-w-4xl mx-auto mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-primary/20 to-accent/20 text-primary rounded-full border border-primary/30">
-            <Sparkles className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 rounded-full border border-amber-500/30">
+            <Zap className="w-4 h-4" />
             Galeria Premium
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6">
-            Arte em
-            <span className="text-gradient-summer"> Cada Copo</span>
+            Energia em
+            <span className="text-gradient-gold"> Cada Copo</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Uma colecao visual que celebra a beleza e a sofisticacao dos nossos
-            10 drinks tropicais unicos.
+            Uma coleção visual que celebra a potência e a sofisticação dos nossos
+            3 drinks explosivos.
           </p>
         </div>
 
-        {/* Gallery Grid - Masonry Style */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        {/* Gallery Grid - 3 items */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {galleryItems.map((item, index) => {
-            const isLarge = index === 0 || index === 4 || index === 7
             return (
               <div
                 key={item.id}
-                className={`group relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ${
-                  isLarge ? 'md:col-span-2 md:row-span-2' : ''
-                } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`group relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 aspect-[3/4] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ 
-                  transitionDelay: `${index * 80}ms`,
-                  aspectRatio: isLarge ? '1' : '3/4'
+                  transitionDelay: `${index * 150}ms`,
                 }}
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
@@ -180,7 +113,7 @@ export function GallerySection() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-8"
                   />
                 </div>
 
@@ -196,7 +129,7 @@ export function GallerySection() {
                     {item.category}
                   </span>
                   <h3
-                    className={`text-lg md:text-xl lg:text-2xl font-bold text-foreground transition-all duration-500 ${
+                    className={`text-xl md:text-2xl lg:text-3xl font-bold text-foreground transition-all duration-500 ${
                       hoveredId === item.id
                         ? "opacity-100 translate-y-0"
                         : "opacity-80 translate-y-0"
@@ -226,8 +159,8 @@ export function GallerySection() {
                 />
                 
                 {/* Number badge */}
-                <div className={`absolute top-4 right-4 z-30 w-10 h-10 rounded-full glass-strong flex items-center justify-center transition-all duration-500 ${hoveredId === item.id ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
-                  <span className={`text-sm font-bold ${item.textColor}`}>{String(item.id).padStart(2, '0')}</span>
+                <div className={`absolute top-4 right-4 z-30 w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center shadow-lg shadow-amber-500/30 transition-all duration-500 ${hoveredId === item.id ? 'opacity-100 scale-100' : 'opacity-70 scale-90'}`}>
+                  <span className="text-lg font-bold text-black">{String(item.id).padStart(2, '0')}</span>
                 </div>
               </div>
             )

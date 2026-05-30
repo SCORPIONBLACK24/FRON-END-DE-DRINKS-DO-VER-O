@@ -2,138 +2,47 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Droplets, Leaf, Sun, Sparkles, Cherry, Palmtree, Apple, Citrus, Flower2, Circle } from "lucide-react"
+import { Leaf, Sparkles, Cherry } from "lucide-react"
 
 const drinks = [
   {
     id: 1,
-    name: "Limao Tropical",
-    tagline: "Frescor Citrico",
+    name: "Limão Tropical",
+    tagline: "Frescor Cítrico",
     description:
-      "A explosao citrica perfeita para os dias quentes. Limoes frescos combinados com hortela e um toque de gengibre criam uma experiencia refrescante incomparavel.",
+      "A explosão cítrica perfeita para os dias quentes. Limões frescos combinados com hortelã e um toque de gengibre criam uma experiência refrescante incomparável. Energia natural que desperta seus sentidos.",
     image: "/drinks/lime-drink.png",
     color: "lime",
     bgGradient: "from-lime-500/30 via-emerald-500/15 to-transparent",
-    ingredients: ["Limao Siciliano", "Hortela Fresca", "Gengibre", "Agua com Gas"],
+    ingredients: ["Limão Siciliano", "Hortelã Fresca", "Gengibre", "Água com Gás"],
     icon: Leaf,
     stats: { refreshment: 98, sweetness: 25, intensity: 70 },
   },
   {
     id: 2,
-    name: "Kiwi Exotico",
-    tagline: "Sabor da Nova Zelandia",
-    description:
-      "Uma viagem sensorial ao exotico. O kiwi maduro encontra a sutileza do pepino e a docura do mel, criando um drink unico e sofisticado.",
-    image: "/drinks/kiwi-drink.png",
-    color: "kiwi",
-    bgGradient: "from-green-500/30 via-teal-500/15 to-transparent",
-    ingredients: ["Kiwi Premium", "Pepino", "Mel Organico", "Limao"],
-    icon: Sparkles,
-    stats: { refreshment: 85, sweetness: 45, intensity: 60 },
-  },
-  {
-    id: 3,
-    name: "Melancia Splash",
-    tagline: "Docura Tropical",
-    description:
-      "A essencia do verao em um copo. Melancia suculenta com manjericao fresco e um twist de limao criam o drink mais refrescante da temporada.",
-    image: "/drinks/watermelon-drink.png",
-    color: "watermelon",
-    bgGradient: "from-pink-500/30 via-red-500/15 to-transparent",
-    ingredients: ["Melancia Fresca", "Manjericao", "Limao Taiti", "Acucar Demerara"],
-    icon: Droplets,
-    stats: { refreshment: 95, sweetness: 65, intensity: 50 },
-  },
-  {
-    id: 4,
-    name: "Maracuja Sunset",
-    tagline: "Paixao Tropical",
-    description:
-      "Intensidade e aroma em perfeita harmonia. O maracuja da Amazonia encontra a cremosidade do coco, resultando em um drink que e pura paixao.",
-    image: "/drinks/passionfruit-drink.png",
-    color: "passionfruit",
-    bgGradient: "from-orange-500/30 via-yellow-500/15 to-transparent",
-    ingredients: ["Maracuja Amazonico", "Leite de Coco", "Mel", "Baunilha"],
-    icon: Sun,
-    stats: { refreshment: 80, sweetness: 55, intensity: 90 },
-  },
-  {
-    id: 5,
     name: "Morango Bliss",
-    tagline: "Doce Seducao",
+    tagline: "Doce Sedução",
     description:
-      "Romance em forma liquida. Morangos organicos com um toque de baunilha e limao criam uma experiencia suave e irresistivel.",
+      "Romance em forma líquida. Morangos orgânicos com um toque de baunilha e limão criam uma experiência suave e irresistível. A doçura perfeita para recarregar suas energias.",
     image: "/drinks/strawberry-drink.png",
     color: "strawberry",
     bgGradient: "from-red-500/30 via-rose-500/15 to-transparent",
-    ingredients: ["Morango Organico", "Baunilha", "Limao", "Acucar de Coco"],
+    ingredients: ["Morango Orgânico", "Baunilha", "Limão", "Açúcar de Coco"],
     icon: Cherry,
     stats: { refreshment: 75, sweetness: 80, intensity: 55 },
   },
   {
-    id: 6,
-    name: "Coco Paradise",
-    tagline: "Cremoso & Tropical",
+    id: 3,
+    name: "Kiwi Exótico",
+    tagline: "Sabor da Nova Zelândia",
     description:
-      "O sabor das praias paradisiacas. Agua de coco fresca com polpa cremosa e um toque de abacaxi transportam voce direto para as Maldivas.",
-    image: "/drinks/coconut-drink.png",
-    color: "coconut",
-    bgGradient: "from-white/20 via-neutral-200/10 to-transparent",
-    ingredients: ["Agua de Coco", "Polpa de Coco", "Abacaxi", "Leite Condensado"],
-    icon: Palmtree,
-    stats: { refreshment: 88, sweetness: 60, intensity: 40 },
-  },
-  {
-    id: 7,
-    name: "Manga Sunrise",
-    tagline: "Doce & Exotico",
-    description:
-      "O nascer do sol em um copo. Manga Palmer madura com cardamomo e um toque de lima criam uma explosao de sabor tropical.",
-    image: "/drinks/mango-drink.png",
-    color: "mango",
-    bgGradient: "from-amber-500/30 via-orange-500/15 to-transparent",
-    ingredients: ["Manga Palmer", "Cardamomo", "Lima", "Acucar Mascavo"],
-    icon: Sun,
-    stats: { refreshment: 82, sweetness: 75, intensity: 65 },
-  },
-  {
-    id: 8,
-    name: "Abacaxi Breeze",
-    tagline: "Tropical & Acidinho",
-    description:
-      "A brisa tropical perfeita. Abacaxi perola com hortela e gengibre criam um drink equilibrado entre doce e acidez.",
-    image: "/drinks/pineapple-drink.png",
-    color: "pineapple",
-    bgGradient: "from-yellow-500/30 via-amber-500/15 to-transparent",
-    ingredients: ["Abacaxi Perola", "Hortela", "Gengibre", "Mel de Abelha"],
-    icon: Citrus,
-    stats: { refreshment: 92, sweetness: 50, intensity: 75 },
-  },
-  {
-    id: 9,
-    name: "Pitaya Magic",
-    tagline: "Exotico & Magico",
-    description:
-      "Uma experiencia magica e unica. Pitaya vermelha com lichia e agua de rosas criam um drink visualmente deslumbrante.",
-    image: "/drinks/pitaya-drink.png",
-    color: "pitaya",
-    bgGradient: "from-fuchsia-500/30 via-pink-500/15 to-transparent",
-    ingredients: ["Pitaya Vermelha", "Lichia", "Agua de Rosas", "Agave"],
-    icon: Flower2,
-    stats: { refreshment: 78, sweetness: 70, intensity: 85 },
-  },
-  {
-    id: 10,
-    name: "Laranja Vitality",
-    tagline: "Classico & Vitamico",
-    description:
-      "O classico reinventado. Laranjas frescas com cenoura e curcuma criam um drink energizante e cheio de vitalidade.",
-    image: "/drinks/orange-drink.png",
-    color: "orange",
-    bgGradient: "from-orange-500/30 via-amber-500/15 to-transparent",
-    ingredients: ["Laranja Bahia", "Cenoura", "Curcuma", "Gengibre"],
-    icon: Circle,
-    stats: { refreshment: 85, sweetness: 55, intensity: 60 },
+      "Uma viagem sensorial ao exótico. O kiwi maduro encontra a sutileza do pepino e a doçura do mel, criando um drink único e sofisticado. Vitaminas e energia em cada gole.",
+    image: "/drinks/kiwi-drink.png",
+    color: "kiwi",
+    bgGradient: "from-green-500/30 via-teal-500/15 to-transparent",
+    ingredients: ["Kiwi Premium", "Pepino", "Mel Orgânico", "Limão"],
+    icon: Sparkles,
+    stats: { refreshment: 85, sweetness: 45, intensity: 60 },
   },
 ]
 
@@ -154,22 +63,6 @@ const colorClasses = {
     glow: "shadow-green-500/30",
     hover: "hover:bg-green-500/30",
   },
-  watermelon: {
-    text: "text-pink-400",
-    bg: "bg-pink-500/20",
-    bgSolid: "bg-pink-400",
-    border: "border-pink-500/30",
-    glow: "shadow-pink-500/30",
-    hover: "hover:bg-pink-500/30",
-  },
-  passionfruit: {
-    text: "text-orange-400",
-    bg: "bg-orange-500/20",
-    bgSolid: "bg-orange-400",
-    border: "border-orange-500/30",
-    glow: "shadow-orange-500/30",
-    hover: "hover:bg-orange-500/30",
-  },
   strawberry: {
     text: "text-red-400",
     bg: "bg-red-500/20",
@@ -177,46 +70,6 @@ const colorClasses = {
     border: "border-red-500/30",
     glow: "shadow-red-500/30",
     hover: "hover:bg-red-500/30",
-  },
-  coconut: {
-    text: "text-neutral-200",
-    bg: "bg-white/10",
-    bgSolid: "bg-white",
-    border: "border-white/20",
-    glow: "shadow-white/20",
-    hover: "hover:bg-white/20",
-  },
-  mango: {
-    text: "text-amber-400",
-    bg: "bg-amber-500/20",
-    bgSolid: "bg-amber-400",
-    border: "border-amber-500/30",
-    glow: "shadow-amber-500/30",
-    hover: "hover:bg-amber-500/30",
-  },
-  pineapple: {
-    text: "text-yellow-400",
-    bg: "bg-yellow-500/20",
-    bgSolid: "bg-yellow-400",
-    border: "border-yellow-500/30",
-    glow: "shadow-yellow-500/30",
-    hover: "hover:bg-yellow-500/30",
-  },
-  pitaya: {
-    text: "text-fuchsia-400",
-    bg: "bg-fuchsia-500/20",
-    bgSolid: "bg-fuchsia-400",
-    border: "border-fuchsia-500/30",
-    glow: "shadow-fuchsia-500/30",
-    hover: "hover:bg-fuchsia-500/30",
-  },
-  orange: {
-    text: "text-orange-500",
-    bg: "bg-orange-500/20",
-    bgSolid: "bg-orange-500",
-    border: "border-orange-500/30",
-    glow: "shadow-orange-500/30",
-    hover: "hover:bg-orange-500/30",
   },
 }
 
@@ -253,23 +106,23 @@ export function DrinksShowcase() {
   return (
     <section id="drinks" className="py-24 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-tropical pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-gold pointer-events-none" />
       
       {/* Section Header */}
       <div className="container mx-auto px-4 mb-20">
         <div className="text-center max-w-4xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-primary/20 to-accent/20 text-primary rounded-full border border-primary/30">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 rounded-full border border-amber-500/30">
             <Sparkles className="w-4 h-4" />
-            Nossa Colecao Premium
+            Coleção Premium
           </span>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-8">
-            <span className="text-foreground">10 Sabores que</span>
+            <span className="text-foreground">3 Sabores que</span>
             <br />
-            <span className="text-gradient-tropical">Encantam o Verao</span>
+            <span className="text-gradient-gold">Energizam seu Dia</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Cada drink e uma obra de arte, cuidadosamente elaborada com
-            ingredientes premium e paixao artesanal. De frutas classicas a exoticas.
+            Cada drink é uma explosão de energia, cuidadosamente elaborado com
+            ingredientes premium. Limão, Morango e Kiwi - os favoritos absolutos.
           </p>
         </div>
       </div>
@@ -309,12 +162,12 @@ export function DrinksShowcase() {
                       activeDrink === drink.id ? "scale-105" : ""
                     }`}
                   >
-                    {/* Decorative rings */}
+                    {/* Decorative rings - gold */}
                     <div
-                      className={`absolute inset-0 -m-6 rounded-full border-2 ${colors.border} opacity-30 transition-all duration-700 group-hover:opacity-60 group-hover:-m-10 group-hover:rotate-12`}
+                      className={`absolute inset-0 -m-6 rounded-full border-2 border-amber-500/20 opacity-30 transition-all duration-700 group-hover:opacity-60 group-hover:-m-10 group-hover:rotate-12`}
                     />
                     <div
-                      className={`absolute inset-0 -m-12 rounded-full border ${colors.border} opacity-20 transition-all duration-700 group-hover:opacity-40 group-hover:-m-16 group-hover:-rotate-6`}
+                      className={`absolute inset-0 -m-12 rounded-full border border-yellow-500/10 opacity-20 transition-all duration-700 group-hover:opacity-40 group-hover:-m-16 group-hover:-rotate-6`}
                     />
 
                     <div className="relative w-full aspect-[3/4] max-w-sm lg:max-w-md mx-auto">
@@ -342,9 +195,9 @@ export function DrinksShowcase() {
                       />
                     </div>
 
-                    {/* Number badge */}
-                    <div className={`absolute -top-4 -left-4 lg:-top-6 lg:-left-6 w-16 h-16 lg:w-20 lg:h-20 ${colors.bgSolid} rounded-full flex items-center justify-center shadow-2xl ${colors.glow}`}>
-                      <span className="text-2xl lg:text-3xl font-bold text-background">
+                    {/* Number badge - gold */}
+                    <div className={`absolute -top-4 -left-4 lg:-top-6 lg:-left-6 w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-2xl shadow-amber-500/30`}>
+                      <span className="text-2xl lg:text-3xl font-bold text-black">
                         {String(drink.id).padStart(2, '0')}
                       </span>
                     </div>
@@ -387,7 +240,7 @@ export function DrinksShowcase() {
                       <span className={`text-sm font-bold ${colors.text}`}>{drink.stats.refreshment}%</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="text-sm text-muted-foreground w-24">Docura</span>
+                      <span className="text-sm text-muted-foreground w-24">Doçura</span>
                       <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
                         <div 
                           className={`h-full ${colors.bgSolid} rounded-full transition-all duration-1000`}
@@ -426,7 +279,7 @@ export function DrinksShowcase() {
                   </div>
 
                   <button
-                    className={`inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 ${colors.bgSolid} text-background shadow-xl ${colors.glow} text-lg group`}
+                    className={`inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 bg-gradient-to-r from-amber-500 to-yellow-500 text-black shadow-xl shadow-amber-500/30 text-lg group`}
                   >
                     Descobrir Mais
                     <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>

@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronDown, Sparkles } from "lucide-react"
+import { ChevronDown, Zap } from "lucide-react"
 
 const drinks = [
   {
     id: 1,
-    name: "Limao",
-    subtitle: "Refrescante & Citrico",
+    name: "Limão",
+    subtitle: "Refrescante & Cítrico",
     image: "/drinks/lime-drink.png",
     color: "from-lime-400/30 to-emerald-500/20",
     glowClass: "glow-lime",
@@ -16,33 +16,6 @@ const drinks = [
   },
   {
     id: 2,
-    name: "Kiwi",
-    subtitle: "Exotico & Vibrante",
-    image: "/drinks/kiwi-drink.png",
-    color: "from-green-400/30 to-teal-500/20",
-    glowClass: "glow-kiwi",
-    accent: "bg-green-400",
-  },
-  {
-    id: 3,
-    name: "Melancia",
-    subtitle: "Doce & Tropical",
-    image: "/drinks/watermelon-drink.png",
-    color: "from-pink-400/30 to-red-500/20",
-    glowClass: "glow-watermelon",
-    accent: "bg-pink-400",
-  },
-  {
-    id: 4,
-    name: "Maracuja",
-    subtitle: "Intenso & Aromatico",
-    image: "/drinks/passionfruit-drink.png",
-    color: "from-orange-400/30 to-yellow-500/20",
-    glowClass: "glow-passionfruit",
-    accent: "bg-orange-400",
-  },
-  {
-    id: 5,
     name: "Morango",
     subtitle: "Doce & Sedutor",
     image: "/drinks/strawberry-drink.png",
@@ -51,49 +24,13 @@ const drinks = [
     accent: "bg-red-400",
   },
   {
-    id: 6,
-    name: "Coco",
-    subtitle: "Cremoso & Tropical",
-    image: "/drinks/coconut-drink.png",
-    color: "from-white/20 to-neutral-300/10",
-    glowClass: "glow-coconut",
-    accent: "bg-white",
-  },
-  {
-    id: 7,
-    name: "Manga",
-    subtitle: "Doce & Exotico",
-    image: "/drinks/mango-drink.png",
-    color: "from-amber-400/30 to-orange-500/20",
-    glowClass: "glow-mango",
-    accent: "bg-amber-400",
-  },
-  {
-    id: 8,
-    name: "Abacaxi",
-    subtitle: "Tropical & Acidinho",
-    image: "/drinks/pineapple-drink.png",
-    color: "from-yellow-400/30 to-amber-500/20",
-    glowClass: "glow-pineapple",
-    accent: "bg-yellow-400",
-  },
-  {
-    id: 9,
-    name: "Pitaya",
-    subtitle: "Exotico & Magico",
-    image: "/drinks/pitaya-drink.png",
-    color: "from-fuchsia-400/30 to-pink-500/20",
-    glowClass: "glow-pitaya",
-    accent: "bg-fuchsia-500",
-  },
-  {
-    id: 10,
-    name: "Laranja",
-    subtitle: "Classico & Vitamico",
-    image: "/drinks/orange-drink.png",
-    color: "from-orange-400/30 to-amber-500/20",
-    glowClass: "glow-orange",
-    accent: "bg-orange-500",
+    id: 3,
+    name: "Kiwi",
+    subtitle: "Exótico & Vibrante",
+    image: "/drinks/kiwi-drink.png",
+    color: "from-green-400/30 to-teal-500/20",
+    glowClass: "glow-kiwi",
+    accent: "bg-green-400",
   },
 ]
 
@@ -120,25 +57,25 @@ export function HeroSection() {
         className={`absolute inset-0 bg-gradient-to-br ${drinks[currentDrink].color} transition-all duration-1000`}
       />
 
-      {/* Summer decorative background elements */}
+      {/* Energy decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Main glow orbs */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-accent/15 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-watermelon/10 rounded-full blur-3xl animate-pulse-glow animation-delay-600" />
-        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-pineapple/10 rounded-full blur-3xl animate-pulse-glow animation-delay-200" />
+        {/* Main glow orbs - gold themed */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-yellow-500/15 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl animate-pulse-glow animation-delay-600" />
+        <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse-glow animation-delay-200" />
         
-        {/* Floating bubbles */}
-        <div className="absolute bottom-0 left-[10%] w-4 h-4 bg-lime-400/30 rounded-full animate-bubble" />
-        <div className="absolute bottom-0 left-[25%] w-3 h-3 bg-pink-400/30 rounded-full animate-bubble animation-delay-200" />
-        <div className="absolute bottom-0 left-[40%] w-5 h-5 bg-yellow-400/30 rounded-full animate-bubble animation-delay-400" />
-        <div className="absolute bottom-0 left-[60%] w-3 h-3 bg-orange-400/30 rounded-full animate-bubble animation-delay-600" />
-        <div className="absolute bottom-0 left-[75%] w-4 h-4 bg-fuchsia-400/30 rounded-full animate-bubble animation-delay-800" />
-        <div className="absolute bottom-0 left-[90%] w-3 h-3 bg-green-400/30 rounded-full animate-bubble animation-delay-1000" />
+        {/* Floating bubbles - gold */}
+        <div className="absolute bottom-0 left-[10%] w-4 h-4 bg-amber-400/30 rounded-full animate-bubble" />
+        <div className="absolute bottom-0 left-[25%] w-3 h-3 bg-yellow-400/30 rounded-full animate-bubble animation-delay-200" />
+        <div className="absolute bottom-0 left-[40%] w-5 h-5 bg-amber-500/30 rounded-full animate-bubble animation-delay-400" />
+        <div className="absolute bottom-0 left-[60%] w-3 h-3 bg-yellow-500/30 rounded-full animate-bubble animation-delay-600" />
+        <div className="absolute bottom-0 left-[75%] w-4 h-4 bg-amber-400/30 rounded-full animate-bubble animation-delay-800" />
+        <div className="absolute bottom-0 left-[90%] w-3 h-3 bg-yellow-400/30 rounded-full animate-bubble animation-delay-1000" />
         
-        {/* Rotating decorative ring */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary/5 animate-rotate-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-accent/5 animate-rotate-slow" style={{ animationDirection: 'reverse' }} />
+        {/* Rotating decorative ring - gold */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-amber-500/10 animate-rotate-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-yellow-500/5 animate-rotate-slow" style={{ animationDirection: 'reverse' }} />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -147,54 +84,51 @@ export function HeroSection() {
           <div
             className={`text-center lg:text-left ${isVisible ? "animate-slide-up" : "opacity-0"}`}
           >
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-primary/20 to-accent/20 text-primary rounded-full border border-primary/30 animate-shimmer">
-              <Sparkles className="w-4 h-4" />
-              <span>Verao 2026</span>
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 rounded-full border border-amber-500/30 animate-shimmer">
+              <Zap className="w-4 h-4" />
+              <span>Energia Pura</span>
+              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-bold mb-8 leading-none">
-              <span className="text-foreground block">Tropical</span>
-              <span className="text-gradient-summer block mt-2">Paradise</span>
+              <span className="text-foreground block">zoom</span>
+              <span className="text-gradient-gold block mt-2">.energia</span>
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Descubra a essencia do verao em cada gole. 
-              <span className="text-foreground font-medium"> 10 sabores tropicais </span>
-              que transportam voce para o paraiso.
+              Potencialize seu dia com sabores vibrantes. 
+              <span className="text-amber-400 font-medium"> 3 sabores explosivos </span>
+              que ativam sua energia natural.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <button
                 onClick={scrollToSection}
-                className="group px-10 py-5 bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold rounded-full hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:scale-105 text-lg"
+                className="group px-10 py-5 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-bold rounded-full hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-500 hover:scale-105 text-lg animate-electric-pulse"
               >
                 <span className="flex items-center gap-2 justify-center">
                   Explorar Sabores
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </button>
-              <button className="px-10 py-5 glass-strong text-foreground font-semibold rounded-full hover:bg-foreground/10 transition-all duration-300 text-lg">
-                Nossa Historia
+              <button className="px-10 py-5 glass-strong text-foreground font-semibold rounded-full hover:bg-amber-500/10 transition-all duration-300 text-lg">
+                Nossa História
               </button>
             </div>
 
             {/* Flavor count badge */}
             <div className="flex items-center gap-6 justify-center lg:justify-start">
               <div className="flex -space-x-3">
-                {drinks.slice(0, 5).map((drink) => (
+                {drinks.map((drink) => (
                   <div
                     key={drink.id}
                     className={`w-10 h-10 rounded-full ${drink.accent} border-2 border-background flex items-center justify-center text-xs font-bold text-background`}
                   />
                 ))}
-                <div className="w-10 h-10 rounded-full bg-foreground/20 border-2 border-background flex items-center justify-center text-xs font-bold text-foreground">
-                  +5
-                </div>
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground">10 Sabores</p>
-                <p className="text-sm text-muted-foreground">Todos naturais</p>
+                <p className="text-2xl font-bold text-foreground">3 Sabores</p>
+                <p className="text-sm text-muted-foreground">Energia natural</p>
               </div>
             </div>
           </div>
@@ -204,9 +138,9 @@ export function HeroSection() {
             className={`relative flex justify-center ${isVisible ? "animate-scale-in animation-delay-400" : "opacity-0"}`}
           >
             <div className={`relative ${drinks[currentDrink].glowClass}`}>
-              {/* Rotating glow rings */}
-              <div className="absolute inset-0 -m-12 rounded-full border-2 border-primary/20 animate-rotate-slow" />
-              <div className="absolute inset-0 -m-20 rounded-full border border-accent/10 animate-rotate-slow" style={{ animationDirection: 'reverse' }} />
+              {/* Rotating glow rings - gold */}
+              <div className="absolute inset-0 -m-12 rounded-full border-2 border-amber-500/20 animate-rotate-slow" />
+              <div className="absolute inset-0 -m-20 rounded-full border border-yellow-500/10 animate-rotate-slow" style={{ animationDirection: 'reverse' }} />
 
               {/* Main drink image */}
               <div className="relative w-[280px] h-[380px] md:w-[380px] md:h-[480px] lg:w-[420px] lg:h-[520px] animate-float">
@@ -232,15 +166,15 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Drink indicators - now showing all 10 */}
-        <div className="flex flex-wrap gap-2 mt-16 justify-center max-w-xl mx-auto">
+        {/* Drink indicators - 3 sabores */}
+        <div className="flex gap-3 mt-16 justify-center">
           {drinks.map((drink, index) => (
             <button
               key={drink.id}
               onClick={() => setCurrentDrink(index)}
               className={`relative h-3 rounded-full transition-all duration-300 overflow-hidden ${
                 index === currentDrink
-                  ? `w-12 ${drink.accent}`
+                  ? `w-16 ${drink.accent}`
                   : "w-3 bg-foreground/20 hover:bg-foreground/40"
               }`}
               aria-label={`Ver drink de ${drink.name}`}
@@ -256,7 +190,7 @@ export function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={scrollToSection}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/50 hover:text-foreground transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-amber-400/50 hover:text-amber-400 transition-colors animate-bounce"
         aria-label="Rolar para baixo"
       >
         <ChevronDown className="w-10 h-10" />

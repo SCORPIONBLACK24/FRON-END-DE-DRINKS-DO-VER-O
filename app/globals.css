@@ -4,74 +4,70 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Summer Tropical Paradise Theme - Vibrant & Refreshing */
-  --background: oklch(0.08 0.02 200);
-  --foreground: oklch(0.98 0.01 80);
-  --card: oklch(0.12 0.025 200);
-  --card-foreground: oklch(0.98 0.01 80);
-  --popover: oklch(0.1 0.02 200);
-  --popover-foreground: oklch(0.98 0.01 80);
-  --primary: oklch(0.82 0.2 145);
-  --primary-foreground: oklch(0.08 0.02 200);
-  --secondary: oklch(0.18 0.03 200);
-  --secondary-foreground: oklch(0.95 0.01 80);
-  --muted: oklch(0.15 0.025 200);
-  --muted-foreground: oklch(0.65 0.02 80);
-  --accent: oklch(0.85 0.18 55);
-  --accent-foreground: oklch(0.08 0.02 200);
+  /* Zoom Energia Theme - Gold & Black Energy */
+  --background: oklch(0.06 0.01 85);
+  --foreground: oklch(0.98 0.02 85);
+  --card: oklch(0.1 0.015 85);
+  --card-foreground: oklch(0.98 0.02 85);
+  --popover: oklch(0.08 0.01 85);
+  --popover-foreground: oklch(0.98 0.02 85);
+  --primary: oklch(0.78 0.18 85);
+  --primary-foreground: oklch(0.06 0.01 85);
+  --secondary: oklch(0.15 0.02 85);
+  --secondary-foreground: oklch(0.95 0.01 85);
+  --muted: oklch(0.12 0.015 85);
+  --muted-foreground: oklch(0.6 0.02 85);
+  --accent: oklch(0.72 0.2 75);
+  --accent-foreground: oklch(0.06 0.01 85);
   --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.2 0.03 200);
-  --input: oklch(0.15 0.025 200);
-  --ring: oklch(0.82 0.2 145);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.18 0.02 85);
+  --input: oklch(0.12 0.015 85);
+  --ring: oklch(0.78 0.18 85);
   
-  /* Tropical fruit colors */
-  --chart-1: oklch(0.82 0.22 145);
-  --chart-2: oklch(0.85 0.2 55);
-  --chart-3: oklch(0.72 0.25 15);
-  --chart-4: oklch(0.78 0.22 70);
-  --chart-5: oklch(0.75 0.2 200);
+  /* Energy gold colors */
+  --chart-1: oklch(0.78 0.18 85);
+  --chart-2: oklch(0.72 0.2 75);
+  --chart-3: oklch(0.68 0.22 65);
+  --chart-4: oklch(0.82 0.15 90);
+  --chart-5: oklch(0.65 0.18 70);
   
   --radius: 1rem;
   
-  /* Custom tropical colors - 10 sabores */
+  /* Fruit colors - focused on 3 flavors */
   --lime: oklch(0.82 0.22 145);
   --kiwi: oklch(0.78 0.2 140);
-  --watermelon: oklch(0.72 0.28 15);
-  --passionfruit: oklch(0.82 0.22 70);
   --strawberry: oklch(0.68 0.26 20);
-  --coconut: oklch(0.92 0.03 80);
-  --mango: oklch(0.82 0.2 85);
-  --pineapple: oklch(0.88 0.18 95);
-  --pitaya: oklch(0.72 0.28 350);
-  --orange: oklch(0.78 0.22 55);
-  --tropical-dark: oklch(0.08 0.02 200);
-  --tropical-glow: oklch(0.9 0.15 145);
-  --summer-gradient-1: oklch(0.82 0.2 145);
-  --summer-gradient-2: oklch(0.85 0.18 55);
-  --summer-gradient-3: oklch(0.72 0.25 15);
+  --gold: oklch(0.78 0.18 85);
+  --gold-bright: oklch(0.85 0.2 85);
+  --gold-dark: oklch(0.65 0.18 80);
+  --energy-dark: oklch(0.06 0.01 85);
+  --energy-glow: oklch(0.85 0.2 85);
+  --energy-gradient-1: oklch(0.78 0.18 85);
+  --energy-gradient-2: oklch(0.72 0.2 75);
+  --energy-gradient-3: oklch(0.65 0.18 70);
 }
 
 .dark {
-  --background: oklch(0.08 0.02 200);
-  --foreground: oklch(0.98 0.01 80);
-  --card: oklch(0.12 0.025 200);
-  --card-foreground: oklch(0.98 0.01 80);
-  --popover: oklch(0.1 0.02 200);
-  --popover-foreground: oklch(0.98 0.01 80);
-  --primary: oklch(0.82 0.2 145);
-  --primary-foreground: oklch(0.08 0.02 200);
-  --secondary: oklch(0.18 0.03 200);
-  --secondary-foreground: oklch(0.95 0.01 80);
-  --muted: oklch(0.15 0.025 200);
-  --muted-foreground: oklch(0.65 0.02 80);
-  --accent: oklch(0.85 0.18 55);
-  --accent-foreground: oklch(0.08 0.02 200);
+  --background: oklch(0.06 0.01 85);
+  --foreground: oklch(0.98 0.02 85);
+  --card: oklch(0.1 0.015 85);
+  --card-foreground: oklch(0.98 0.02 85);
+  --popover: oklch(0.08 0.01 85);
+  --popover-foreground: oklch(0.98 0.02 85);
+  --primary: oklch(0.78 0.18 85);
+  --primary-foreground: oklch(0.06 0.01 85);
+  --secondary: oklch(0.15 0.02 85);
+  --secondary-foreground: oklch(0.95 0.01 85);
+  --muted: oklch(0.12 0.015 85);
+  --muted-foreground: oklch(0.6 0.02 85);
+  --accent: oklch(0.72 0.2 75);
+  --accent-foreground: oklch(0.06 0.01 85);
   --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.2 0.03 200);
-  --input: oklch(0.15 0.025 200);
-  --ring: oklch(0.82 0.2 145);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.18 0.02 85);
+  --input: oklch(0.12 0.015 85);
+  --ring: oklch(0.78 0.18 85);
 }
 
 @theme inline {
@@ -104,16 +100,12 @@
   --color-chart-5: var(--chart-5);
   --color-lime: var(--lime);
   --color-kiwi: var(--kiwi);
-  --color-watermelon: var(--watermelon);
-  --color-passionfruit: var(--passionfruit);
   --color-strawberry: var(--strawberry);
-  --color-coconut: var(--coconut);
-  --color-mango: var(--mango);
-  --color-pineapple: var(--pineapple);
-  --color-pitaya: var(--pitaya);
-  --color-orange: var(--orange);
-  --color-tropical-dark: var(--tropical-dark);
-  --color-tropical-glow: var(--tropical-glow);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-dark: var(--gold-dark);
+  --color-energy-dark: var(--energy-dark);
+  --color-energy-glow: var(--energy-glow);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -213,7 +205,7 @@
   75% { transform: translateY(5px) rotate(-5deg); }
 }
 
-@keyframes tropical-gradient {
+@keyframes energy-gradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
@@ -225,6 +217,15 @@
   100% { transform: translateY(-100vh) scale(1); opacity: 0; }
 }
 
+@keyframes electric-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.4), 0 0 40px rgba(218, 165, 32, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.6), 0 0 80px rgba(218, 165, 32, 0.4);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -234,7 +235,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(218,165,32,0.3), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
 }
@@ -271,13 +272,17 @@
   animation: wave 3s ease-in-out infinite;
 }
 
-.animate-tropical-gradient {
+.animate-energy-gradient {
   background-size: 200% 200%;
-  animation: tropical-gradient 5s ease infinite;
+  animation: energy-gradient 5s ease infinite;
 }
 
 .animate-bubble {
   animation: bubble 8s ease-in-out infinite;
+}
+
+.animate-electric-pulse {
+  animation: electric-pulse 2s ease-in-out infinite;
 }
 
 .animation-delay-100 {
@@ -327,131 +332,97 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--lime), var(--accent));
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--primary), var(--watermelon));
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
 }
 
 /* Glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(218, 165, 32, 0.05);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(218, 165, 32, 0.15);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(218, 165, 32, 0.08);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(218, 165, 32, 0.2);
 }
 
 /* Glow effects */
-.glow-lime {
-  box-shadow: 0 0 80px rgba(166, 227, 161, 0.4), 0 0 120px rgba(166, 227, 161, 0.2);
+.glow-gold {
+  box-shadow: 0 0 80px rgba(218, 165, 32, 0.4), 0 0 120px rgba(218, 165, 32, 0.2);
 }
 
-.glow-watermelon {
-  box-shadow: 0 0 80px rgba(255, 107, 129, 0.4), 0 0 120px rgba(255, 107, 129, 0.2);
+.glow-lime {
+  box-shadow: 0 0 80px rgba(166, 227, 161, 0.4), 0 0 120px rgba(166, 227, 161, 0.2);
 }
 
 .glow-kiwi {
   box-shadow: 0 0 80px rgba(156, 204, 101, 0.4), 0 0 120px rgba(156, 204, 101, 0.2);
 }
 
-.glow-passionfruit {
-  box-shadow: 0 0 80px rgba(255, 183, 77, 0.4), 0 0 120px rgba(255, 183, 77, 0.2);
-}
-
 .glow-strawberry {
   box-shadow: 0 0 80px rgba(255, 82, 82, 0.4), 0 0 120px rgba(255, 82, 82, 0.2);
 }
 
-.glow-coconut {
-  box-shadow: 0 0 80px rgba(255, 255, 255, 0.3), 0 0 120px rgba(255, 255, 255, 0.15);
-}
-
-.glow-mango {
-  box-shadow: 0 0 80px rgba(255, 193, 7, 0.4), 0 0 120px rgba(255, 193, 7, 0.2);
-}
-
-.glow-pineapple {
-  box-shadow: 0 0 80px rgba(255, 235, 59, 0.4), 0 0 120px rgba(255, 235, 59, 0.2);
-}
-
-.glow-pitaya {
-  box-shadow: 0 0 80px rgba(233, 30, 99, 0.4), 0 0 120px rgba(233, 30, 99, 0.2);
-}
-
-.glow-orange {
-  box-shadow: 0 0 80px rgba(255, 152, 0, 0.4), 0 0 120px rgba(255, 152, 0, 0.2);
-}
-
 /* Text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, var(--lime), var(--accent), var(--watermelon));
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold), var(--gold-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-summer {
-  background: linear-gradient(135deg, var(--pineapple), var(--mango), var(--watermelon));
+.text-gradient-energy {
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-tropical {
-  background: linear-gradient(135deg, var(--lime), var(--pitaya), var(--orange));
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffd700, #daa520, #b8860b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* Background gradients */
-.bg-gradient-summer {
+.bg-gradient-energy {
   background: linear-gradient(135deg, 
-    rgba(166, 227, 161, 0.15), 
-    rgba(255, 193, 7, 0.1), 
-    rgba(255, 107, 129, 0.15)
+    rgba(218, 165, 32, 0.15), 
+    rgba(184, 134, 11, 0.1), 
+    rgba(139, 101, 8, 0.05)
   );
 }
 
-.bg-gradient-tropical {
+.bg-gradient-gold {
   background: linear-gradient(180deg, 
     var(--background) 0%,
-    rgba(166, 227, 161, 0.05) 50%,
+    rgba(218, 165, 32, 0.05) 50%,
     var(--background) 100%
   );
 }
 
 /* Decorative elements */
-.tropical-border {
-  border-image: linear-gradient(135deg, var(--lime), var(--accent), var(--watermelon)) 1;
+.energy-border {
+  border-image: linear-gradient(135deg, var(--gold-bright), var(--gold), var(--gold-dark)) 1;
 }
 
 /* Fruit color utilities */
 .text-lime { color: var(--lime); }
 .text-kiwi { color: var(--kiwi); }
-.text-watermelon { color: var(--watermelon); }
-.text-passionfruit { color: var(--passionfruit); }
 .text-strawberry { color: var(--strawberry); }
-.text-coconut { color: var(--coconut); }
-.text-mango { color: var(--mango); }
-.text-pineapple { color: var(--pineapple); }
-.text-pitaya { color: var(--pitaya); }
-.text-orange { color: var(--orange); }
+.text-gold { color: var(--gold); }
+.text-gold-bright { color: var(--gold-bright); }
 
 .bg-lime { background-color: var(--lime); }
 .bg-kiwi { background-color: var(--kiwi); }
-.bg-watermelon { background-color: var(--watermelon); }
-.bg-passionfruit { background-color: var(--passionfruit); }
 .bg-strawberry { background-color: var(--strawberry); }
-.bg-coconut { background-color: var(--coconut); }
-.bg-mango { background-color: var(--mango); }
-.bg-pineapple { background-color: var(--pineapple); }
-.bg-pitaya { background-color: var(--pitaya); }
-.bg-orange { background-color: var(--orange); }
+.bg-gold { background-color: var(--gold); }
+.bg-gold-bright { background-color: var(--gold-bright); }

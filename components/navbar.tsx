@@ -1,10 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, Zap } from "lucide-react"
 
 const navLinks = [
-  { label: "Inicio", href: "#" },
+  { label: "Início", href: "#" },
   { label: "Drinks", href: "#drinks" },
   { label: "Caipirinhas", href: "#caipirinhas" },
   { label: "Sobre", href: "#features" },
@@ -45,7 +46,7 @@ export function Navbar() {
         <div className="container mx-auto px-4">
           <div
             className={`flex items-center justify-between rounded-full px-6 lg:px-8 py-3 transition-all duration-500 ${
-              isScrolled ? "glass-strong shadow-2xl shadow-primary/10" : ""
+              isScrolled ? "glass-strong shadow-2xl shadow-amber-500/10" : ""
             }`}
           >
             {/* Logo */}
@@ -55,13 +56,17 @@ export function Navbar() {
                 e.preventDefault()
                 scrollToSection("#")
               }}
-              className="flex items-center gap-2 text-2xl font-serif font-bold text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-3 text-2xl font-serif font-bold text-foreground hover:text-amber-400 transition-colors"
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="Zoom Energia"
+                width={48}
+                height={48}
+                className="rounded-full animate-electric-pulse"
+              />
               <span className="hidden sm:inline">
-                Tropical<span className="text-gradient-summer">Paradise</span>
+                zoom<span className="text-gradient-gold">.energia</span>
               </span>
             </a>
 
@@ -75,21 +80,21 @@ export function Navbar() {
                     e.preventDefault()
                     scrollToSection(link.href)
                   }}
-                  className="text-sm font-semibold text-foreground/70 hover:text-foreground transition-colors relative group"
+                  className="text-sm font-semibold text-foreground/70 hover:text-amber-400 transition-colors relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 transition-all duration-300 group-hover:w-full rounded-full" />
                 </a>
               ))}
             </div>
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="text-xs font-medium text-primary">18 Sabores</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20">
+                <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+                <span className="text-xs font-medium text-amber-400">3 Sabores</span>
               </div>
-              <button className="px-6 py-2.5 bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-bold rounded-full hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105">
+              <button className="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-sm font-bold rounded-full hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 hover:scale-105">
                 Pedir Agora
               </button>
             </div>
@@ -120,11 +125,20 @@ export function Navbar() {
       >
         {/* Decorative background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl" />
         </div>
         
         <div className="flex flex-col items-center justify-center h-full gap-8 relative z-10">
+          {/* Mobile Logo */}
+          <Image
+            src="/images/logo.png"
+            alt="Zoom Energia"
+            width={80}
+            height={80}
+            className="rounded-full animate-electric-pulse mb-4"
+          />
+          
           {navLinks.map((link, index) => (
             <a
               key={link.label}
@@ -133,7 +147,7 @@ export function Navbar() {
                 e.preventDefault()
                 scrollToSection(link.href)
               }}
-              className={`text-3xl font-bold text-foreground hover:text-primary transition-all duration-300 ${
+              className={`text-3xl font-bold text-foreground hover:text-amber-400 transition-all duration-300 ${
                 isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -142,12 +156,12 @@ export function Navbar() {
             </a>
           ))}
           <div className="flex items-center gap-4 mt-8">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-primary">10 Sabores</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20">
+              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-amber-400">3 Sabores</span>
             </div>
           </div>
-          <button className="mt-4 px-10 py-4 bg-gradient-to-r from-primary to-accent text-primary-foreground text-lg font-bold rounded-full hover:shadow-xl transition-all duration-300">
+          <button className="mt-4 px-10 py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-lg font-bold rounded-full hover:shadow-xl transition-all duration-300">
             Pedir Agora
           </button>
         </div>

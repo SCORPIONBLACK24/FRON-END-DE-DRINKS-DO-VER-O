@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Tropical Vibes | Drinks de Verão',
-  description: 'Descubra drinks tropicais refrescantes com sabores de limão, kiwi, melancia e maracujá. O verão nunca teve um sabor tão bom.',
+  title: 'zoom.energia | Drinks de Energia Natural',
+  description: 'Potencialize seu dia com sabores explosivos de limão, morango e kiwi. Energia pura e natural em cada gole.',
   generator: 'v0.app',
   icons: {
     icon: [
