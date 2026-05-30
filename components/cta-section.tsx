@@ -1,13 +1,37 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Instagram, Facebook, Heart, Zap, GraduationCap, Lightbulb } from "lucide-react"
+import { Heart, Sparkles } from "lucide-react"
 import Image from "next/image"
 
-const floatingDrinks = [
-  { image: "/drinks/lime-drink.png", position: "top-10 left-10", delay: "0s" },
-  { image: "/drinks/strawberry-drink.png", position: "top-20 right-20", delay: "0.5s" },
-  { image: "/drinks/kiwi-drink.png", position: "bottom-20 left-20", delay: "1s" },
+const drinks = [
+  {
+    name: "Limao",
+    subtitle: "Frescor citrico",
+    image: "/drinks/lime-drink.png",
+    color: "text-lime-400",
+    borderColor: "border-lime-500/40",
+    bgColor: "bg-lime-500/10",
+    glowColor: "shadow-lime-500/20",
+  },
+  {
+    name: "Morango",
+    subtitle: "Doce paixao",
+    image: "/drinks/strawberry-drink.png",
+    color: "text-red-400",
+    borderColor: "border-red-500/40",
+    bgColor: "bg-red-500/10",
+    glowColor: "shadow-red-500/20",
+  },
+  {
+    name: "Kiwi",
+    subtitle: "Sabor exotico",
+    image: "/drinks/kiwi-drink.png",
+    color: "text-green-400",
+    borderColor: "border-green-500/40",
+    bgColor: "bg-green-500/10",
+    glowColor: "shadow-green-500/20",
+  },
 ]
 
 export function CTASection() {
@@ -35,114 +59,112 @@ export function CTASection() {
 
   return (
     <section id="cta" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-background to-red-500/10" />
+      {/* Background - romantic gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-500/15 via-background to-rose-500/10" />
 
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-red-500/15 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-3xl" />
+      {/* Floating hearts */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-[10%] w-4 h-4 text-red-400/30 animate-float">
+          <Heart className="w-full h-full fill-current" />
+        </div>
+        <div className="absolute top-40 right-[15%] w-6 h-6 text-rose-400/20 animate-float animation-delay-400">
+          <Heart className="w-full h-full fill-current" />
+        </div>
+        <div className="absolute bottom-32 left-[20%] w-5 h-5 text-red-400/25 animate-float animation-delay-200">
+          <Heart className="w-full h-full fill-current" />
+        </div>
+        <div className="absolute bottom-20 right-[25%] w-4 h-4 text-rose-400/30 animate-float animation-delay-600">
+          <Heart className="w-full h-full fill-current" />
+        </div>
         
-        {/* Floating drink images */}
-        {floatingDrinks.map((drink, index) => (
-          <div
-            key={index}
-            className={`absolute ${drink.position} w-24 h-32 opacity-20 animate-float hidden lg:block`}
-            style={{ animationDelay: drink.delay }}
-          >
-            <Image
-              src={drink.image}
-              alt=""
-              fill
-              className="object-contain"
-            />
-          </div>
-        ))}
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-red-500/15 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-rose-500/15 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
       </div>
 
       <div
         className="container mx-auto px-4 relative z-10 opacity-0"
         ref={containerRef}
       >
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Glass card */}
-          <div className="glass-strong rounded-[3rem] p-8 md:p-12 lg:p-16 border border-amber-500/20">
+          <div className="glass-strong rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 border border-red-500/20">
             <div className="text-center">
               {/* Badge */}
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-red-500/30 to-amber-500/30 text-red-400 rounded-full border border-red-500/30">
-                <Heart className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 text-sm font-medium tracking-wider uppercase bg-gradient-to-r from-red-500/30 to-rose-500/30 text-red-400 rounded-full border border-red-500/30">
+                <Heart className="w-4 h-4 fill-current" />
                 Especial Dia dos Namorados
+                <Sparkles className="w-4 h-4" />
               </span>
 
               {/* Main heading */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold mb-4 leading-tight">
                 Celebre o Amor
-                <br />
-                <span className="text-gradient-gold">Neste Verão</span>
+              </h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold mb-8">
+                <span className="text-gradient-gold">Neste Verao</span>
               </h2>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-                Um projeto desenvolvido com carinho para celebrar momentos especiais.
-                Drinks que unem sabor, energia e paixão para compartilhar a dois.
+                Momentos especiais merecem sabores especiais. Compartilhe 
+                <span className="text-red-400 font-semibold"> amor e paixao </span>
+                com drinks que aquecem o coracao e refrescam a alma.
               </p>
 
-              {/* Stats badges */}
-              <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-                <div className="px-6 py-3 rounded-full glass border border-lime-500/20">
-                  <span className="text-lime-400 font-bold">Limão</span>
-                </div>
-                <div className="px-6 py-3 rounded-full glass border border-red-500/20">
-                  <span className="text-red-400 font-bold">Morango</span>
-                </div>
-                <div className="px-6 py-3 rounded-full glass border border-green-500/20">
-                  <span className="text-green-400 font-bold">Kiwi</span>
-                </div>
-              </div>
-
-              {/* Project info */}
-              <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
-                <div className="glass p-6 rounded-2xl border border-amber-500/20 text-left">
-                  <div className="flex items-center gap-3 mb-3">
-                    <GraduationCap className="w-6 h-6 text-amber-400" />
-                    <h3 className="font-bold text-foreground">Projeto Acadêmico</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Desenvolvido pela turma INF-09 do curso Técnico de Informática
-                  </p>
-                </div>
-                <div className="glass p-6 rounded-2xl border border-amber-500/20 text-left">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Lightbulb className="w-6 h-6 text-yellow-400" />
-                    <h3 className="font-bold text-foreground">Empreendedorismo</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Explorando inovação e criatividade no mundo das bebidas energéticas
-                  </p>
+              {/* Drinks showcase - romantic presentation */}
+              <div className="mb-12">
+                <h3 className="text-lg font-semibold text-foreground/80 mb-6 flex items-center justify-center gap-2">
+                  <Heart className="w-5 h-5 text-red-400" />
+                  Sabores do Amor
+                  <Heart className="w-5 h-5 text-red-400" />
+                </h3>
+                
+                <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+                  {drinks.map((drink, index) => (
+                    <div
+                      key={drink.name}
+                      className={`group flex flex-col items-center p-4 rounded-2xl ${drink.bgColor} border ${drink.borderColor} hover:scale-105 transition-all duration-300 hover:shadow-xl ${drink.glowColor}`}
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
+                      {/* Drink image */}
+                      <div className="relative w-24 h-32 md:w-32 md:h-40 mb-3 group-hover:-translate-y-2 transition-transform duration-300">
+                        <Image
+                          src={drink.image}
+                          alt={`Drink de ${drink.name}`}
+                          fill
+                          className="object-contain drop-shadow-lg"
+                        />
+                      </div>
+                      
+                      {/* Drink info */}
+                      <h4 className={`font-bold ${drink.color} text-lg`}>{drink.name}</h4>
+                      <p className="text-xs text-muted-foreground">{drink.subtitle}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Social links */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <span className="text-sm text-muted-foreground">
-                  Siga o projeto
-                </span>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="p-4 rounded-full glass hover:bg-amber-500/20 hover:border-amber-500/30 border border-transparent transition-all duration-300 group"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-6 h-6 text-foreground/70 group-hover:text-amber-400 transition-colors" />
-                  </a>
-                  <a
-                    href="#"
-                    className="p-4 rounded-full glass hover:bg-amber-500/20 hover:border-amber-500/30 border border-transparent transition-all duration-300 group"
-                    aria-label="Facebook"
-                  >
-                    <Facebook className="w-6 h-6 text-foreground/70 group-hover:text-amber-400 transition-colors" />
-                  </a>
+              {/* Romantic message */}
+              <div className="max-w-xl mx-auto mb-10 p-6 rounded-2xl bg-gradient-to-r from-red-500/10 via-rose-500/10 to-red-500/10 border border-red-500/20">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <Heart className="w-5 h-5 text-red-400 fill-current" />
+                  <span className="text-red-400 font-semibold">Para Casais Apaixonados</span>
+                  <Heart className="w-5 h-5 text-red-400 fill-current" />
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Brinde ao amor com nossos drinks especiais. Perfeitos para um encontro romantico, 
+                  um piquenique ao por do sol ou qualquer momento a dois que mereca ser inesquecivel.
+                </p>
+              </div>
+
+              {/* Bottom accent */}
+              <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center gap-2 px-6 py-3 rounded-full border border-amber-500/30 bg-amber-500/5">
+                  <div className="relative w-8 h-8">
+                    <Image src="/images/logo.png" alt="zoom.energia" fill className="object-contain" />
+                  </div>
+                  <span className="text-sm font-bold tracking-wider uppercase text-amber-400">zoom.energia</span>
                 </div>
               </div>
             </div>
